@@ -1,6 +1,7 @@
 import React from "react";
+import { Tag } from "lucide-react";
 
-export default function SectionCard({ title, icon = "📌", data }) {
+export default function SectionCard({ title, icon = <Tag className="h-5 w-5 text-slate-700" />, data }) {
   if (!data || (typeof data === "object" && Object.keys(data).length === 0)) {
     return null;
   }

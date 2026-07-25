@@ -6,6 +6,7 @@ import SectionCard from "./components/SectionCard";
 import Loading from "./components/Loading";
 import ErrorMessage from "./components/ErrorMessage";
 import { fetchAuditData } from "./services/auditApi";
+import { Accessibility, Bolt, FileText, Image, Link2, Shield, Target, Tag } from "lucide-react";
 
 export default function App() {
   const [loading, setLoading] = useState(false);
@@ -122,14 +123,14 @@ export default function App() {
             <OverviewCard report={report} />
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <SectionCard title="SEO" icon="🎯" data={getSeoData()} />
-              <SectionCard title="Metadata" icon="🏷️" data={getMetadataData()} />
-              <SectionCard title="Headings" icon="📑" data={getHeadingsData()} />
-              <SectionCard title="Images" icon="🖼️" data={getImagesData()} />
-              <SectionCard title="Links" icon="🔗" data={getLinksData()} />
-              <SectionCard title="Accessibility" icon="♿" data={getAccessibilityData()} />
-              <SectionCard title="Security" icon="🛡️" data={getSecurityData()} />
-              <SectionCard title="Performance" icon="⚡" data={getPerformanceData()} />
+              <SectionCard title="SEO" icon={<Target className="h-5 w-5 text-slate-700" />} data={getSeoData()} />
+              <SectionCard title="Metadata" icon={<Tag className="h-5 w-5 text-slate-700" />} data={getMetadataData()} />
+              <SectionCard title="Headings" icon={<FileText className="h-5 w-5 text-slate-700" />} data={getHeadingsData()} />
+              <SectionCard title="Images" icon={<Image className="h-5 w-5 text-slate-700" />} data={getImagesData()} />
+              <SectionCard title="Links" icon={<Link2 className="h-5 w-5 text-slate-700" />} data={getLinksData()} />
+              <SectionCard title="Accessibility" icon={<Accessibility className="h-5 w-5 text-slate-700" />} data={getAccessibilityData()} />
+              <SectionCard title="Security" icon={<Shield className="h-5 w-5 text-slate-700" />} data={getSecurityData()} />
+              <SectionCard title="Performance" icon={<Bolt className="h-5 w-5 text-slate-700" />} data={getPerformanceData()} />
             </div>
           </div>
         )}
